@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Notes.App">
 
+
     <!-- Resources used by multiple pages in the application -->
     <Application.Resources>
 
