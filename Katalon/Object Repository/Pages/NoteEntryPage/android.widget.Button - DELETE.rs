@@ -3,7 +3,7 @@
    <description></description>
    <name>android.widget.Button - DELETE</name>
    <tag></tag>
-   <elementGuidId>00000000-0000-0000-0000-000000000000</elementGuidId>
+   <elementGuidId>0c19a373-0daf-49a1-8410-8b5ab8023239</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
@@ -160,6 +160,6 @@
       <type>Main</type>
       <value>//hierarchy/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.view.ViewGroup[1]/androidx.drawerlayout.widget.DrawerLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.view.ViewGroup[1]/android.view.ViewGroup[1]/android.view.ViewGroup[1]/android.view.ViewGroup[1]/android.view.ViewGroup[2]/android.widget.Button[2]</value>
    </webElementProperties>
-   <locator>DeleteButton</locator>
+   <locator>DeleteBTN</locator>
    <locatorStrategy>ACCESSIBILITY</locatorStrategy>
 </MobileElementEntity>

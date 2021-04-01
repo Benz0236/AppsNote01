@@ -18,12 +18,12 @@ import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
 if (CustomKeywords.'sample.Device.isIOS'()) {
-	Mobile.startExistingApplication(GlobalVariable.App_ID_iOS)
+    Mobile.startExistingApplication(GlobalVariable.App_ID_iOS)
 } else if (CustomKeywords.'sample.Device.isAndroid'()) {
-	Mobile.startExistingApplication(GlobalVariable.App_ID_Android)
+    Mobile.startExistingApplication(GlobalVariable.App_ID_Android)
 }
 
-String AddTime = new java.text.SimpleDateFormat("MM/dd/yyyy HH:mm:ss").format(new Date())
+String AddTime = new java.text.SimpleDateFormat('MM/dd/yyyy HH:mm:ss').format(new Date())
 
 Mobile.comment('Time =' + AddTime)
 
@@ -37,4 +37,9 @@ Mobile.tap(findTestObject('Pages/NotePage/listID', [('text') : newTime]), 0)
 
 Mobile.tap(findTestObject('Pages/NoteEntryPage/android.widget.Button - DELETE'), 0)
 
+Mobile.delay(2, FailureHandling.STOP_ON_FAILURE)
+
+Mobile.verifyElementNotExist(findTestObject('Object Repository/Pages/NotePage/ListID', [('text') : newTime]), GlobalVariable.G_Timeout)
+
 Mobile.closeApplication()
+

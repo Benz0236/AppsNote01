@@ -24,13 +24,21 @@ Mobile.comment('Note_Time =' + NoteTime)
 
 Mobile.tap(findTestObject('Object Repository/Pages/NotePage/AddBTN2'), GlobalVariable.G_Timeout)
 
-Mobile.setText(findTestObject('Object Repository/Pages/NoteEntryPage/NoteEditor'), NoteTime , GlobalVariable.G_Timeout)
+Mobile.delay(2, FailureHandling.STOP_ON_FAILURE)
 
-Mobile.tap(findTestObject('Object Repository/Pages/NoteEntryPage/SaveBTN'), GlobalVariable.G_Timeout)
+Mobile.verifyElementExist(findTestObject('Object Repository/Common/Utils/FindByText', [('text') : 'Enter your note']), GlobalVariable.G_Timeout)
 
-Mobile.tap(CustomKeywords.'sample.Common.GetRepositoryByOS'('Pages/NoteEntryPage/ConfirmAddNoteBTN'), GlobalVariable.G_Timeout)
+Mobile.setText(findTestObject('Object Repository/Pages/NoteEntryPage/NoteEditor'), NoteTime, GlobalVariable.G_Timeout)
+
+Mobile.delay(2, FailureHandling.STOP_ON_FAILURE)
 
 Mobile.verifyElementExist(findTestObject('Object Repository/Common/Utils/FindByText', [('text') : NoteTime]), GlobalVariable.G_Timeout)
 
-return NoteTime;
+Mobile.tap(findTestObject('Object Repository/Pages/NoteEntryPage/SaveBTN'), GlobalVariable.G_Timeout)
+
+Mobile.tap(findTestObject('Object Repository/Pages/NoteEntryPage/Label - OK'), GlobalVariable.G_Timeout)
+
+Mobile.verifyElementExist(findTestObject('Object Repository/Common/Utils/FindByText', [('text') : NoteTime]), GlobalVariable.G_Timeout)
+
+return NoteTime
 
